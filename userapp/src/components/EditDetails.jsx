@@ -31,14 +31,18 @@ const EditDetails = () => {
             userName: userName,
             email: email
         }
-        console.log(detail);
-        console.log(wholeArr.userData[0]);
+        // console.log(wholeArr.userData[0]);
         let flt = wholeArr.userData[0].filter(data => data.id === mystate.id)
         console.log(flt);
-        
+        flt[0].name = name
+        flt[0].username = userName
+        flt[0].email = email
+        console.log(flt);
+          console.log(flt[0].id); 
         dispatch(getDetails(detail))
         //   setNav(true)
     }
+    console.log(mystate);
 
     return (
 
